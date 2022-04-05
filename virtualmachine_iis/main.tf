@@ -15,7 +15,7 @@ provider "azurerm" {
   features {}
 }
 
-locals {
+locals { 
   resource_group = var.rg_name
   location       = var.location
 }
