@@ -23,12 +23,12 @@ variable "region" {
 variable "prefix" {
   type        = string
   description = "prefix for naming"
-  default     = "karachi"
+  default     = "nazimabad"
 }
 
 
 locals {
-  name = "${var.prefix}-555"
+  name = "${var.prefix}-777"
 }
 
 resource "azurerm_resource_group" "vnet" {
@@ -43,10 +43,10 @@ module "network" {
   vnet_name           = "${local.name}-vnet"
   address_space       = "10.0.0.0/16"
   subnet_prefixes     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-  subnet_names        = ["subnet1", "subnet2", "subnet3"]
+  subnet_names        = ["subnetX", "subnetY", "subnetZ"]
 
   tags = {
-    environment = "dev"
+    environment = "uat"
     team = "IT"
 
   }
