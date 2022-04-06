@@ -25,7 +25,7 @@ resource "azurerm_resource_group" "resourcegroup" {
 }
 
 # all properties will be fetched from Module
-module "storageaccount" {
+module "storage" {
   source = "../modules/storageaccount"
 
   resource_group_name     = azurerm_resource_group.resourcegroup.name
